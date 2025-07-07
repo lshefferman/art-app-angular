@@ -1,0 +1,25 @@
+<!-- Layout principal en columna, ocupa toda la pantalla --> 
+
+<div class="d-flex flex-column min-vh-100"> 
+    <!-- HEADER --> 
+  
+    <app-header></app-header> 
+    
+    <!-- CONTENT + SIDEBAR --> 
+    <div class="container-fluid flex-grow-1 d-flex"> 
+      <div class="row flex-grow-1 w-100">
+        <!-- SIDEBAR --> 
+        <div class="col-12 col-lg-2 bg-light p-0 border-end">
+          <app-sidebar></app-sidebar> 
+        </div> 
+        <!-- CONTENT --> 
+        <div class="col p-4 overflow-y-auto"> 
+          <router-outlet></router-outlet>
+        </div> 
+      </div> 
+    </div> 
+  
+    <!-- FOOTER ALWAYS AT THE BOTTOM --> 
+    <app-footer></app-footer> 
+  
+  </div> 

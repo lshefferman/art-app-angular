@@ -1,0 +1,17 @@
+
+<div class="container mt-4">
+    <div class="row">
+      
+      <!-- List of artworks -->
+      <div class="col-md-12">
+        <app-art-list [artworks]="artworks" (artworkSelected)="onArtSelected($event)"></app-art-list>
+      </div>
+  
+      <!-- Artwork details -->
+      <div class="col-md-4 d-flex flex-column" >
+        <app-art-details [art]="selectedArt"></app-art-details>
+      </div>
+  
+    </div>
+  </div>
+  

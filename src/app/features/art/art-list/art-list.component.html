@@ -1,0 +1,9 @@
+<h2 class="mb-4">List of Artwork</h2>
+<ul class="list-group">
+  <li *ngFor="let art of artworks" class="list-group-item d-flex justify-content-between align-items-center">
+    <span>{{ art.title }}</span>
+    <button (click)="onArtworkSelected(art)" class="btn btn-sm btn-primary">
+      View Art
+    </button>
+  </li>
+</ul>

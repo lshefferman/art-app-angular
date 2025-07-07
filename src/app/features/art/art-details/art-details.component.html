@@ -1,0 +1,22 @@
+<div *ngIf="art" class="card">
+    <div class="card-header">
+      <strong>{{ art.title }}</strong>
+    </div>
+    <div class="card-body">
+      <img [src]="art.primaryImage" class="img-thumbnail mb-2" alt="Art image">
+      
+      <p>{{ art.description }}</p>
+      <p><strong>Artist:</strong> {{ art.artistDisplayName }}</p>
+      <p><strong>Year:</strong> {{ art.objectDate }}</p>
+      <p><strong>Dimensions:</strong> {{ art.dimensions }}</p>
+    </div>
+  </div>
+  
+  <div *ngIf="false" class="d-flex align-items-center justify-content-center text-muted text-center flex-grow-1 w-100 h-100">
+    <p class="m-0">Select an artwork to see details.</p>
+  </div>
+  
+  <div *ngIf="!art" class="alert alert-primary" role="alert">
+    Select an artwork to see details.
+  </div>
+  
